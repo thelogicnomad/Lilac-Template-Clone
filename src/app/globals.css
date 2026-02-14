@@ -1,0 +1,48 @@
+/* Gopher Font -- Medium (n5) used as the single weight for now */
+@font-face {
+  font-family: 'Gopher';
+  src: url('/fonts/Gopher-Medium.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream text-olive;
+    font-family: 'Gopher', Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FBF6F1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8BDD4;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8ADCA;
+}
