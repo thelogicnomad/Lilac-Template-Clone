@@ -38,7 +38,7 @@ export default function FAQSection() {
         <section ref={ref} className="py-20 lg:py-31 px-6 lg:px-12 bg-cream">
             <div className="max-w-7xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-                    {/* Image Side */}
+
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
@@ -67,7 +67,7 @@ export default function FAQSection() {
                         </div>
                     </motion.div>
 
-                    {/* FAQ Side */}
+
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
@@ -114,7 +114,7 @@ export default function FAQSection() {
                                     </motion.div>
                                 </div>
                             ))}
-                            {/* Bottom border for last item */}
+
                             <div className="border-t border-[#223614]" />
                         </div>
                     </motion.div>

@@ -48,7 +48,7 @@ export default function SpecialtiesSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="group"
             >
-              <div className="border border-olive bg-cream p-6 h-full flex flex-col transition-all duration-300">
+              <div className="border border-olive bg-[#E5E0DA] p-6 h-full flex flex-col transition-all duration-300">
                 <h3 className="font-serif text-xl lg:text-2xl font-normal text-olive mb-4">
                   {specialty.title}
                 </h3>

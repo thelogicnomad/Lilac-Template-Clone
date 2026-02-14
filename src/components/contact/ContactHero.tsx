@@ -35,26 +35,48 @@ export default function ContactHero() {
                             Get in touch for questions, or to book a free 15-minute consultation.
                         </p>
 
-                        <div className="flex items-end gap-[-20px] pt-8">
-                            <div className="w-[180px] h-[220px] rounded-full overflow-hidden relative">
-                                <Image
-                                    src="/images/blogs/blog-post-4.webp"
-                                    alt="Lilac flowers"
-                                    fill
-                                    className="object-cover"
-                                    sizes="180px"
-                                />
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="relative"
+                            style={{
+                                height: '90%',
+                                width: '90%'
+                            }}
+                        >
+                            <div className="relative w-[45%] mx-auto aspect-[2/3]">
+                                <svg width="0" height="0" style={{ position: 'absolute' }}>
+                                    <defs>
+                                        <clipPath id="arched-window-intro" clipPathUnits="objectBoundingBox">
+                                            <path d="M0.495,0 A0.505,0.336,0,0,0,0,0.329 V1 H1 V0.329 A0.505,0.336,0,0,0,0.495,0" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <div
+                                    className="relative w-full h-full"
+                                    style={{ clipPath: 'url(#arched-window-intro)' }}
+                                >
+                                    <Image
+                                        src="/images/herosection.webp"
+                                        alt="Lilac flower bouquet"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, 40vw"
+                                    />
+                                </div>
                             </div>
-                            <div className="w-[160px] h-[200px] rounded-full overflow-hidden relative -ml-6">
+
+                            <div className="absolute -bottom-10 right-0 lg:right-[15%] w-[30%] aspect-square rounded-full overflow-hidden shadow-lg">
                                 <Image
                                     src="/images/intro-flower.webp"
-                                    alt="White flowers"
+                                    alt="White flowers close-up"
                                     fill
                                     className="object-cover"
-                                    sizes="160px"
+                                    sizes="(max-width: 768px) 40vw, 20vw"
                                 />
                             </div>
-                        </div>
+                        </motion.div>
                     </motion.div>
 
                     <motion.div
@@ -71,7 +93,7 @@ export default function ContactHero() {
                 </div>
             </div>
 
-            <div className="w-full bg-[#D8D0E0] h-[120px] mt-16" />
+
         </section>
     )
 }

@@ -14,7 +14,7 @@ export default function ChallengeSection() {
     <section ref={ref} className="py-20 lg:py-32">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-0">
-          {/* Image Side */}
+
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
@@ -30,7 +30,7 @@ export default function ChallengeSection() {
             />
           </motion.div>
 
-          {/* Content Side */}
+
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
@@ -41,7 +41,7 @@ export default function ChallengeSection() {
               <h3 className="text-3xl lg:text-4xl font-light text-olive leading-tight">
                 You might be experiencing:
               </h3>
-              
+
               <ul className="space-y-3 text-olive-light font-light text-lg">
                 <li className="flex items-start gap-3">
                   <span className="text-olive mt-1">•</span>

@@ -18,7 +18,7 @@ export default function HeroSection() {
       <div className="max-w-[1500px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-8 lg:gap-0 items-center">
 
-          {/* IMAGE SIDE - Adjusted for Logo Clearance */}
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
@@ -29,7 +29,7 @@ export default function HeroSection() {
               maxWidth: '490px',
             }}
           >
-            {/* Added lg:pt-24 to ensure clearance from the logo at the top */}
+
             <div className="lg:ml-[20px] lg:mt-[60px] lg:pt-12">
               <svg width="0" height="0" style={{ position: 'absolute' }}>
                 <defs>
@@ -55,7 +55,7 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* TEXT SIDE - Exact Laptop Alignments Preserved */}
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}

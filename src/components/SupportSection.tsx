@@ -17,20 +17,19 @@ export default function SupportSection() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, margin: '-100px' })
 
-    // Consistent Theme Colors
     const colors = {
-        bg: '#C2BFCB',      // The Gray/Lavender background from your snippet
-        text: '#2C3A2E',    // Dark Olive Green text
-        border: 'rgba(44, 58, 46, 0.25)', // Semi-transparent border
+        bg: '#C2BFCB',
+        text: '#2C3A2E',
+        border: 'rgba(44, 58, 46, 0.25)',
     }
 
     return (
         <section ref={ref} className="w-full">
             <div className="w-full">
-                {/* Grid Container - Min height ensures consistent sizing */}
+
                 <div className="grid lg:grid-cols-2 gap-0 min-h-[700px]">
 
-                    {/* LEFT SIDE: Image */}
+
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
@@ -46,7 +45,7 @@ export default function SupportSection() {
                         />
                     </motion.div>
 
-                    {/* RIGHT SIDE: Text Content */}
+
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
@@ -54,10 +53,6 @@ export default function SupportSection() {
                         style={{ backgroundColor: colors.bg, color: colors.text }}
                         className="flex flex-col justify-between order-2 relative"
                     >
-                        {/* Content Wrapper 
-                - flex-1: Pushes content to center, button to bottom
-                - px-12 lg:px-24: Consistent wide padding
-            */}
                         <div className="flex-1 flex flex-col justify-center px-10 lg:px-24 py-16">
                             <div className="max-w-xl">
                                 <h2 className="font-serif text-4xl lg:text-5xl font-normal leading-[1.15] mb-8">
@@ -86,15 +81,15 @@ export default function SupportSection() {
                             </div>
                         </div>
 
-                        {/* Footer Button Section - MATCHING EXACT STYLE */}
+
                         <a
                             href="#contact"
                             className="group w-full relative block"
                         >
-                            {/* Top Border Line */}
+
                             <div className="w-full h-[1px]" style={{ backgroundColor: colors.border }} />
 
-                            {/* Button Content - Smooth slow transition */}
+
                             <div className="py-9 flex justify-center items-center transition-colors duration-700 ease-in-out group-hover:bg-[#2C3A2E] group-hover:text-white">
                                 <span className="inline-flex items-center gap-3 uppercase tracking-[0.15em] text-xs lg:text-sm font-semibold">
                                     WORK WITH ME

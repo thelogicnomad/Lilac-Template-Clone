@@ -20,11 +20,11 @@ export default function Header() {
       const delta = currentScrollY - lastScrollY.current
 
       if (delta > 0 && currentScrollY > 80) {
-        // Scrolling down
+
         setHidden(true)
         scrollUpDistance.current = 0
       } else if (delta < 0) {
-        // Scrolling up -- accumulate distance
+
         scrollUpDistance.current += Math.abs(delta)
         if (scrollUpDistance.current > 40) {
           setHidden(false)
@@ -56,7 +56,7 @@ export default function Header() {
               Lilac Template
             </Link>
 
-            {/* Desktop Nav */}
+
             <nav className="hidden md:flex items-center gap-8">
               <Link
                 href="/blog"
@@ -72,7 +72,7 @@ export default function Header() {
               </Link>
             </nav>
 
-            {/* Mobile Menu Button */}
+
             <button
               onClick={toggleMobileMenu}
               className="md:hidden text-olive hover:text-lavender transition-colors"
@@ -84,7 +84,7 @@ export default function Header() {
         </div>
       </motion.header>
 
-      {/* Mobile Menu */}
+
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -114,7 +114,7 @@ export default function Header() {
         )}
       </AnimatePresence>
 
-      {/* Mobile Menu Overlay */}
+
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div

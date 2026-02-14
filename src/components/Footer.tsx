@@ -5,12 +5,12 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer>
-      {/* Main Footer Content */}
+
       <div className="bg-cream py-16 lg:py-20 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
-            {/* Contact Info */}
-            <div className="space-y-6">
+
+            <div className="space-y-6 text-center md:text-left">
               <h3
                 className="font-serif font-normal text-olive"
                 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
@@ -39,8 +39,8 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Hours */}
-            <div className="space-y-4">
+
+            <div className="space-y-4 text-center md:text-left">
               <h3
                 className="font-serif font-normal text-olive"
                 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)' }}
@@ -53,15 +53,15 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Find / Navigation */}
-            <div className="space-y-4 text-right">
+
+            <div className="space-y-4 text-center md:text-right">
               <h3
                 className="font-serif font-normal text-olive"
                 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)' }}
               >
                 Find
               </h3>
-              <nav className="flex flex-col gap-2">
+              <nav className="flex flex-col gap-2 items-center md:items-end">
                 <Link
                   href="/"
                   className="text-olive font-medium underline underline-offset-2 transition-colors duration-300"
@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+
       <div className="bg-[#E5E0DA] py-8 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto text-center space-y-4">
           <nav className="flex flex-wrap justify-center gap-4 text-olive font-medium" style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}>

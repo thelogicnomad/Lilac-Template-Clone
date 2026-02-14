@@ -33,7 +33,7 @@ export default function CTASection() {
 
           <motion.a
             href="/contact"
-            // whileHover={{ scale: 1.02 }}
+
             whileTap={{ scale: 0.98 }}
             className="group inline-flex items-center gap-3 px-10 py-4 border border-cream/60 text-cream hover:bg-cream hover:text-olive transition-all duration-300 font-normal tracking-[0.2em] text-xs"
           >
