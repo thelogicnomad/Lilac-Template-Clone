@@ -120,7 +120,7 @@ export default function Footer() {
           </p>
 
           <p className="text-olive font-medium" style={{ fontSize: 'clamp(0.8rem, 1.1vw, 0.9375rem)' }}>
-            All Rights Reserved &copy; 2024 Your Business Name Here, LLC.
+            All Rights Reserved &copy; 2026 Your Business Name Here, LLC.
           </p>
         </div>
       </div>
